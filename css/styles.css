@@ -1,0 +1,23 @@
+input{
+    color: white;
+    background-color: blue;
+    text-align: center;
+}
+
+body{
+    background-image: url(../img/TheEye2_2560x1600.jpg);
+    background-size: 170vh;
+    background-repeat: no-repeat;
+
+}
+
+background{
+    width: 100rem;
+    height: 70rem;
+}
+
+
+.navbarnavbar-expand-lgnavbar-lightbg-light{
+    background-color: red;
+    color: red;
+}

@@ -70,22 +70,16 @@ document.getElementById('deleteButton').addEventListener('click', () => {
 });
 
 function eliminarArchivo() {
-    // Aquí puedes agregar la lógica para eliminar el archivo o elemento
-    // Por ejemplo, eliminar un archivo con nombre "archivo.txt":
-    // Si estás trabajando en un entorno de navegador web, no puedes eliminar archivos directamente desde JavaScript por razones de seguridad. En su lugar, puedes simular la eliminación o realizar una solicitud al servidor para eliminar el archivo.
-    // Simulación de eliminación:
-    // Supongamos que hay un elemento con id "archivo" que deseas eliminar
     var elemento = document.getElementById("archivo");
     if (elemento) {
         elemento.parentNode.removeChild(elemento);
-        // Muestra un mensaje de éxito
+        
         Swal.fire({
             title: "Deleted!",
             text: "Your file has been deleted.",
             icon: "success"
         });
     } else {
-        // Muestra un mensaje de error si el archivo no existe
         Swal.fire({
             title: "Error",
             text: "The file does not exist.",

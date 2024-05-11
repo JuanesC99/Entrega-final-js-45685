@@ -43,47 +43,13 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 
-// Define la variable swalWithBootstrapButtons antes del evento de clic
-document.getElementById('deleteButton').addEventListener('click', () => {
-    Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonText: "Yes, delete it!",
-        cancelButtonText: "No, cancel!",
-        reverseButtons: true
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // Elimina el archivo o elemento
-            eliminarArchivo();
-        } else if (
-            result.dismiss === Swal.DismissReason.cancel
-        ) {
-            Swal.fire({
-                title: "Cancelled",
-                text: "Your file is safe :)",
-                icon: "error"
-            });
-        }
-    });
-});
-
-function eliminarArchivo() {
-    var elemento = document.getElementById("archivo");
-    if (elemento) {
-        elemento.parentNode.removeChild(elemento);
-        
-        Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success"
-        });
-    } else {
-        Swal.fire({
-            title: "Error",
-            text: "The file does not exist.",
-            icon: "error"
-        });
-    }
-}
+function handleSearch() {
+    // Obtener el valor del input de búsqueda
+    var query = document.getElementById('searchInput').value;
+    
+    // Redirigir al usuario a la página de resultados según el término de búsqueda
+    window.location.href = "pages/tienda.html?q=Tienda" + encodeURIComponent(query);
+    
+    // Evitar que el formulario se envíe
+    return true;
+  }

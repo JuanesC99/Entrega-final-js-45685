@@ -48,8 +48,5 @@ function handleSearch() {
     var query = document.getElementById('searchInput').value;
     
     // Redirigir al usuario a la página de resultados según el término de búsqueda
-    window.location.href = "pages/tienda.html?q=Tienda" + encodeURIComponent(query);
-    
-    // Evitar que el formulario se envíe
-    return true;
-  }
+    window.location.href = "pages/tienda.html?q=" + encodeURIComponent(query);
+}

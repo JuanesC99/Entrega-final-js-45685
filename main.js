@@ -37,7 +37,7 @@ async function showPasswordPrompt() {
         preConfirm: (password) => {
             return new Promise((resolve) => {
                 setTimeout(() => {
-                    if (password === "password123") {
+                    if (password === "1234") {
                         resolve();
                     } else {
                         Swal.showValidationMessage("Invalid password!");
@@ -62,7 +62,7 @@ function loginSuccess() {
     }).then(() => {
         // Redirige solo si la página de inicio no es la actual
         if (window.location.pathname !== "/index.html") {
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         }
     });
 }

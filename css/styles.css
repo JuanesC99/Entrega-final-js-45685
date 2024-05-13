@@ -21,3 +21,8 @@ background{
     background-color: red;
     color: red;
 }
+
+a:hover{
+    background-color: red;
+    text-emphasis-color: red;
+}

@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             var cardData = {
-                imageUrl: "img/TheEye2_25060x1600.jpg",
+                imageUrl: "img/7d5d665f92c09858439458678bc879a4.gif",
                 title: "Título de la Card",
                 description: "Descripción de la Card.",
                 buttonText: "Haz clic aquí",

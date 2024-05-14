@@ -59,4 +59,22 @@ function loginSuccess() {
 // Event listener para mostrar el cuadro de diálogo de inicio de sesión cuando la página se carga
 document.addEventListener('DOMContentLoaded', function() {
     showPasswordPrompt();
+
+
+            // Crear elementos del navbar
+            var navbar = document.getElementById("navbar");
+
+            var links = [
+                { text: "", href: "#" },
+                { text: "", href: "#" },
+                { text: "", href: "#" }
+            ];
+    
+            // Agregar enlaces al navbar
+            for (var i = 0; i < links.length; i++) {
+                var link = document.createElement("a");
+                link.href = links[i].href;
+                link.textContent = links[i].text;
+                navbar.appendChild(link);
+            }
 });

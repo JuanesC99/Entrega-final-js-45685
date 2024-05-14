@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             var cardData = {
-                imageUrl: "img/7d5d665f92c09858439458678bc879a4.gif",
+                imageUrl: "../img/7d5d665f92c09858439458678bc879a4.gif",
                 title: "Título de la Card",
                 description: "Descripción de la Card.",
-                buttonText: "Haz clic aquí",
-                buttonUrl: "https://example.com"
+                buttonText: "Ir al carrito",
+                buttonUrl: "../pages/card-view.html" // Ruta relativa a la página card-view.html
             };
         
             // Crear elementos de la card
@@ -112,6 +112,49 @@ document.addEventListener('DOMContentLoaded', function() {
             cardContainer.appendChild(card);
 
 
+            var cardData = {
+                imageUrl: "../img/7d5d665f92c09858439458678bc879a4.gif",
+                title: "Título de la Card",
+                description: "Descripción de la Card.",
+                buttonText: "Ir al carrito",
+                buttonUrl: "../pages/carrito.html" // Ruta relativa a la página card-view.html
+            };
 
+            
+            // Crear elementos de la card
+            var cardContainer = document.getElementById("cardContainer");
+        
+            var card = document.createElement("div");
+            card.classList.add("card");
+        
+            var cardImage = document.createElement("img");
+            cardImage.classList.add("card-img");
+            cardImage.src = cardData.imageUrl;
+        
+            var cardContent = document.createElement("div");
+            cardContent.classList.add("card-content");
+        
+            var cardTitle = document.createElement("h3");
+            cardTitle.classList.add("card-title");
+            cardTitle.textContent = cardData.title;
+        
+            var cardDescription = document.createElement("p");
+            cardDescription.classList.add("card-description");
+            cardDescription.textContent = cardData.description;
+        
+            var cardButton = document.createElement("a");
+            cardButton.classList.add("card-button");
+            cardButton.textContent = cardData.buttonText;
+            cardButton.href = cardData.buttonUrl;
+        
+            // Agregar elementos a la card
+            cardContent.appendChild(cardTitle);
+            cardContent.appendChild(cardDescription);
+            cardContent.appendChild(cardButton);
+        
+            card.appendChild(cardImage);
+            card.appendChild(cardContent);
+        
+            cardContainer.appendChild(card);
 
 });

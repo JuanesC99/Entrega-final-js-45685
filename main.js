@@ -64,11 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Crear elementos del navbar
             var navbar = document.getElementById("navbar");
 
-            var links = [
-                { text: "", href: "#" },
-                { text: "", href: "#" },
-                { text: "", href: "#" }
-            ];
+
     
             // Agregar enlaces al navbar
             for (var i = 0; i < links.length; i++) {
